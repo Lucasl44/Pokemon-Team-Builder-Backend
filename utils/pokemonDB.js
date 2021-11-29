@@ -9,8 +9,8 @@ const deleteDB = async () => {
 };
 
 const createDB = async (body) => {
-    for (let pokemon of body) {
-        await Pokemon.create(pokemon)
+    for (let item of body) {
+        Pokemon.create({pokemonName: item[0].pokemonName, typeOne: item[0].typeOne, typeTwo: item[0].typeTwo});
     }
 };
 
